@@ -51,7 +51,7 @@ export default function Login() {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <Avatar sx={{ m: 1, bgcolor: '#F5F5F8' , }}>
+          <Avatar sx={{ m: 1, bgcolor: '#FF3811' , }}>
             <FacebookIcon sx={{ bgcolor:'#3B5998' }} />
           </Avatar>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
