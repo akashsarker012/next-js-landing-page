@@ -65,7 +65,7 @@ export default function Footer() {
     },
   ];
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1}}>
       <Container maxWidth="xl">
         <Grid container>
           <Grid xs={12} md={5} lg={4}>
