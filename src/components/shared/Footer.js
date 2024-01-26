@@ -110,7 +110,6 @@ export default function Footer() {
            
                 <List >
                   {navItems.map((post) => (
-                    console.log(post),
                     <ListItem key={post.name} component="div" sx={{ padding: 0 }}>
                       <Link href={post.link}>
                         <ListItemText primary={post.name} />
@@ -128,7 +127,6 @@ export default function Footer() {
            
                 <List >
                   {navItems.map((post) => (
-                    console.log(post),
                     <ListItem key={post.name} component="div" sx={{ padding: 0 }}>
                       <Link href={post.link}>
                         <ListItemText primary={post.name} />
