@@ -65,7 +65,7 @@ export default function Footer() {
     },
   ];
   return (
-    <Box sx={{ flexGrow: 1}}>
+    <Box sx={{ flexGrow: 1, background:'white'}}>
       <Container maxWidth="xl">
         <Grid container>
           <Grid xs={12} md={5} lg={4}>
@@ -121,17 +121,21 @@ export default function Footer() {
               </Item>
             </Grid>
             <Grid xs={6} lg={3}>
-              <Item>
-                <Box
-                  id="category-b"
-                  sx={{ fontSize: "12px", textTransform: "uppercase" }} >
-                  Category B
-                </Box>
-                <Box component="ul" aria-labelledby="category-b" sx={{ pl: 2 }}>
-                  <li>Link 2.1</li>
-                  <li>Link 2.2</li>
-                  <li>Link 2.3</li>
-                </Box>
+            <Item>
+                <Typography variant="h6" sx={{ my: 2 }}>
+                  About
+                </Typography>
+           
+                <List >
+                  {navItems.map((post) => (
+                    console.log(post),
+                    <ListItem key={post.name} component="div" sx={{ padding: 0 }}>
+                      <Link href={post.link}>
+                        <ListItemText primary={post.name} />
+                      </Link>
+                    </ListItem>
+                  ))}
+                </List>
               </Item>
             </Grid>
             <Grid xs={6} lg={3}>
@@ -152,8 +156,7 @@ export default function Footer() {
               <Item>
                 <Box
                   id="category-d"
-                  sx={{ fontSize: "12px", textTransform: "uppercase" }}
-                >
+                  sx={{ fontSize: "12px", textTransform: "uppercase" }}>
                   Category D
                 </Box>
                 <Box component="ul" aria-labelledby="category-d" sx={{ pl: 2 }}>
